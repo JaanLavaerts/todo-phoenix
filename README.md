@@ -1,6 +1,12 @@
-# TodoList
+# TodoList made using Phoenix Framework
 
-Deployed using gigalixir: https://todo-ipmajor.gigalixirapp.com/
+## Features
+
+- Authentication and Authorization
+- Users can create/edit/delete tasks
+- Users can invite other users to collaborate on tasks
+- Internationalization (English and Dutch)
+- And more...
 
 To start your Phoenix server:
 
@@ -11,11 +17,3 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Features
-
-- Authentication and Authorization
-- Users can create/edit/delete tasks
-- Users can invite other users to collaborate on tasks
-- Internationalization (English and Dutch)
-- And more...
