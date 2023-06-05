@@ -1,0 +1,137 @@
+<div class="d-flex justify-content-between align-items-center">
+  <%= if @title == "Tasks" do %>
+  <h1> <%= gettext "Tasks" %> </h1>
+  <% else %>
+  <h1> <%= gettext "All Tasks" %> </h1>
+  <% end %>
+  <span>
+    <%= link to: Routes.task_path(@conn, :new), class: "btn btn-primary btn-sm" do %>
+      <i class="fa-solid fa-plus"></i>
+    <% end %>
+  </span>
+</div>
+<hr class="hr">
+
+<%= if @tasks == [] do %>
+  <div class="alert alert-info" role="alert">
+    <i class="fas fa-info-circle"></i> <%= gettext "No tasks yet, click the" %> <i class="fa-solid fa-plus"></i> <%= gettext "button to create one." %>
+  </div>
+<% else %>
+<span class="badge badge-pill badge-primary mb-2"><%= gettext "Owner" %></span>
+<span class="badge badge-pill badge-outline  mb-2"><%= gettext "Guest" %></span>
+
+<p class="text-muted">
+  <i class="fa-sharp fa-solid fa-circle-exclamation"></i> <%= gettext "Tasks can only be deleted by their owner." %>
+</p>
+
+<div class="container">
+  <div class="row">
+    <%= for task <- @tasks do %>
+      <%= if task.status do %>
+        <div class="col-md-4 my-3">
+          <div class="card">
+            <h4 class="card-header">
+              <del><%= task.title %></del>
+              <footer class="deadline">
+                <i class="fas fa-calendar"></i> <del><%= task.created_at %></del>
+              </footer>
+            </h4>
+            <div class="card-body">
+              <h5 class="card-text">
+                <del><%= task.body %></del>
+              </h5>
+              <p class="card-text">
+                <i class="fas fa-clock"></i> <del><%= task.deadline_format %></del>
+              </p>
+              <%= for {username, index} <- Enum.with_index(task.usernames) do %>
+                  <%= if index == 0 do %>
+                    <span class="badge badge-pill badge-secondary mb-2 p-1"><%= username %></span>
+                  <% else %>
+                    <span class="badge badge-pill badge-outline-secondary mb-2 p-1"><%= username %></span>
+              <% end %>
+              <% end %>
+              <hr>
+              <div class="d-flex justify-content-between" role="group" aria-label="Task Actions">
+                <span>
+                  <%= link to: Routes.task_path(@conn, :completed, task), class: "btn btn-outline-secondary btn-sm" do %>
+                    <i class="fas fa-check"></i> <%= gettext "Completed" %>
+                  <% end %>
+                </span>
+                <div>
+                  <span>
+                    <%= link to: Routes.task_path(@conn, :edit, task), class: "btn btn-outline-secondary btn-sm" do %>
+                      <i class="fas fa-edit"></i>
+                    <% end %>
+                  </span>
+                  <%= if Enum.at(task.usernames, 0) == @current_user.username do %>
+                    <span>
+                      <%= link to: Routes.task_path(@conn, :delete, task), method: :delete, data: [confirm: gettext("Are you sure?")], class: "btn btn-outline-secondary btn-sm" do %>
+                        <i class="fas fa-trash-alt"></i>
+                      <% end %>
+                    </span>
+                  <% end %>
+                  <span>
+                    <%= link to: Routes.task_path(@conn, :invite, task), class: "btn btn-outline-secondary btn-sm" do %>
+                      <i class="fa-solid fa-user-plus"></i>
+                    <% end %>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="col-md-4 my-3">
+          <div class="card shadow-lg">
+            <h4 class="card-header"><%= task.title %>
+              <footer class="deadline">
+                <i class="fas fa-calendar"></i> <%= task.created_at %>
+              </footer>
+            </h4>
+            <div class="card-body">
+              <h5 class="card-text"><%= task.body %></h5>
+              <p class="card-text">
+                <i class="fas fa-clock"></i> <%= task.deadline_format %>
+              </p>
+              <%= for {username, index} <- Enum.with_index(task.usernames) do %>
+                  <%= if index == 0 do %>
+                    <span class="badge badge-pill badge-primary mb-2 p-1"><%= username %></span>
+                  <% else %>
+                    <span class="badge badge-pill badge-outline  mb-2 p-1"><%= username %></span>
+              <% end %>
+              <% end %>
+              <hr>
+              <div class="d-flex justify-content-between" role="group" aria-label="Task Actions">
+                <span>
+                  <%= link to: Routes.task_path(@conn, :completed, task), class: "btn btn-success btn-sm" do %>
+                    <i class="fas fa-check"></i> <%= gettext "Complete" %>
+                  <% end %>
+                </span>
+                <div>
+                  <span>
+                    <%= link to: Routes.task_path(@conn, :edit, task), class: "btn btn-secondary btn-sm" do %>
+                      <i class="fas fa-edit"></i>
+                    <% end %>
+                  </span>
+                  <%= if Enum.at(task.usernames, 0) == @current_user.username do %>
+                    <span>
+                      <%= link to: Routes.task_path(@conn, :delete, task), method: :delete, data: [confirm: gettext("Are you sure?")], class: "btn btn-danger btn-sm" do %>
+                        <i class="fas fa-trash-alt"></i>
+                      <% end %>
+                    </span>
+                  <% end %>
+                  <span>
+                    <%= link to: Routes.task_path(@conn, :invite, task), class: "btn btn-primary btn-sm" do %>
+                      <i class="fa-solid fa-user-plus"></i>
+                    <% end %>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% end %>
+    </div>
+</div>
+<% end %>

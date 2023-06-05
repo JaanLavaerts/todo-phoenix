@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <%= if Guardian.Plug.authenticated?(@conn, []) do %>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"><%= gettext "Home"%></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/tasks"><%= gettext "Tasks"%></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/invites"><%= gettext "Invites"%></a>
+        </li>
+
+        <%= if Guardian.Plug.current_resource(@conn).role == "Admin" do %>
+          <li class="nav-item">
+            <a class="nav-link" href={Routes.user_path(@conn, :index)}><%= gettext "Users"%></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/tasks"><%= gettext "All Tasks"%></a>
+          </li>
+        <% end %>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href={Routes.user_path(@conn, :show, Guardian.Plug.current_resource(@conn).id)}>
+          <i class="fa-solid fa-user"></i>
+          <%= Guardian.Plug.current_resource(@conn).username %>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={Routes.session_path(@conn, :logout)}>
+          <i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= if !Guardian.Plug.authenticated?(@conn, []) do %>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href={Routes.session_path(@conn, :new)}><%= gettext "Login"%></a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href={Routes.user_path(@conn, :new)}><%= gettext "Register"%></a>
+        </li>
+      </ul>
+
+    </div>
+  <% end %>
+</nav>
+
+<main class="container my-5">
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+  <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+  <%= @inner_content %>
+</main>

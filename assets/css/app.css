@@ -1,0 +1,208 @@
+/* This file is for your main application CSS */
+
+/* Alerts and form errors used by phx.new */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
+
+.phx-click-loading {
+  opacity: 0.5;
+  transition: opacity 1s ease-out;
+}
+
+.phx-loading {
+  cursor: wait;
+}
+
+.phx-modal {
+  opacity: 1 !important;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.phx-modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.phx-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.phx-modal-close:hover,
+.phx-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fade-in-scale {
+  animation: 0.2s ease-in 0s normal forwards 1 fade-in-scale-keys;
+}
+
+.fade-out-scale {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-scale-keys;
+}
+
+.fade-in {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-in-keys;
+}
+.fade-out {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
+}
+
+@keyframes fade-in-scale-keys {
+  0% {
+    scale: 0.95;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out-scale-keys {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 0.95;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-keys {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out-keys {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Nav bar links */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+/* Nav bar links on hover */
+.navbar a:hover {
+  color: #ddd;
+}
+
+/* Active nav bar link */
+.navbar .active {
+  color: #ddd;
+}
+
+/* Nav bar logo */
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.deadline {
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.badge-outline {
+  border: 1px solid;
+  border-color: #007bff;
+  background-color: transparent;
+  color: #007bff;
+}
+
+.badge-outline-secondary {
+  border: 1px solid;
+  border-color: #6c757d;
+  background-color: transparent;
+  color: #6c757d;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+  font-weight: 300 !important;
+  line-height: 1.2 !important;
+}
+
+.hr {
+  margin-top: 5px;
+}
+
+.flag a {
+  text-decoration: none !important;
+}
+
+.flag img {
+  width: 35px;
+}

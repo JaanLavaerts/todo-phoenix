@@ -1,0 +1,384 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/todo_list_web/templates/page/index.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Welcome to TodoList"
+msgstr "Welkom bij TodoList"
+
+#: lib/todo_list_web/templates/page/index.html.heex:4
+#, elixir-autogen, elixir-format
+msgid "A simple todo list application built with Phoenix Framework"
+msgstr "Een eenvoudige todo-lijst applicatie gebouwd met Phoenix Framework"
+
+#: lib/todo_list_web/templates/page/index.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Please"
+msgstr "Gelieve"
+
+#: lib/todo_list_web/templates/page/index.html.heex:6
+#: lib/todo_list_web/templates/page/index.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "or"
+msgstr "of"
+
+#: lib/todo_list_web/templates/page/index.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "sign in"
+msgstr "aanmelden"
+
+#: lib/todo_list_web/templates/page/index.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "sign up"
+msgstr "registreren"
+
+#: lib/todo_list_web/templates/page/index.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "to get started."
+msgstr "om te beginnen."
+
+#: lib/todo_list_web/templates/layout/app.html.heex:26
+#: lib/todo_list_web/templates/task/index.html.heex:5
+#, elixir-autogen, elixir-format
+msgid "All Tasks"
+msgstr "Alle taken"
+
+#: lib/todo_list_web/templates/layout/app.html.heex:10
+#, elixir-autogen, elixir-format
+msgid "Home"
+msgstr "Home"
+
+#: lib/todo_list_web/templates/layout/app.html.heex:56
+#: lib/todo_list_web/templates/session/new.html.eex:1
+#: lib/todo_list_web/templates/session/new.html.eex:19
+#, elixir-autogen, elixir-format
+msgid "Login"
+msgstr "Aanmelden"
+
+#: lib/todo_list_web/templates/layout/app.html.heex:62
+#: lib/todo_list_web/templates/user/new.html.heex:2
+#: lib/todo_list_web/templates/user/new.html.heex:49
+#, elixir-autogen, elixir-format
+msgid "Register"
+msgstr "Registreren"
+
+#: lib/todo_list_web/templates/layout/app.html.heex:14
+#: lib/todo_list_web/templates/task/index.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "Tasks"
+msgstr "Taken"
+
+#: lib/todo_list_web/templates/layout/app.html.heex:23
+#: lib/todo_list_web/templates/user/index.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Users"
+msgstr "Gebruikers"
+
+#: lib/todo_list_web/templates/session/new.html.eex:13
+#: lib/todo_list_web/templates/user/edit.html.heex:49
+#: lib/todo_list_web/templates/user/new.html.heex:43
+#, elixir-autogen, elixir-format
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: lib/todo_list_web/templates/session/new.html.eex:6
+#: lib/todo_list_web/templates/user/edit.html.heex:37
+#: lib/todo_list_web/templates/user/new.html.heex:30
+#: lib/todo_list_web/templates/user/show.html.heex:25
+#, elixir-autogen, elixir-format
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: lib/todo_list_web/templates/user/edit.html.heex:24
+#: lib/todo_list_web/templates/user/index.html.heex:11
+#: lib/todo_list_web/templates/user/new.html.heex:24
+#: lib/todo_list_web/templates/user/show.html.heex:29
+#, elixir-autogen, elixir-format
+msgid "Date of Birth"
+msgstr "Geboortedatum"
+
+#: lib/todo_list_web/templates/user/edit.html.heex:43
+#: lib/todo_list_web/templates/user/index.html.heex:10
+#: lib/todo_list_web/templates/user/new.html.heex:37
+#: lib/todo_list_web/templates/user/show.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "Email"
+msgstr "E-mail"
+
+#: lib/todo_list_web/templates/user/edit.html.heex:12
+#: lib/todo_list_web/templates/user/index.html.heex:8
+#: lib/todo_list_web/templates/user/new.html.heex:12
+#: lib/todo_list_web/templates/user/show.html.heex:13
+#, elixir-autogen, elixir-format
+msgid "First Name"
+msgstr "Voornaam"
+
+#: lib/todo_list_web/templates/user/edit.html.heex:18
+#: lib/todo_list_web/templates/user/index.html.heex:9
+#: lib/todo_list_web/templates/user/new.html.heex:18
+#: lib/todo_list_web/templates/user/show.html.heex:17
+#, elixir-autogen, elixir-format
+msgid "Last Name"
+msgstr "Achternaam"
+
+#: lib/todo_list_web/templates/task/form.html.heex:4
+#: lib/todo_list_web/templates/user/new.html.heex:7
+#, elixir-autogen, elixir-format
+msgid "Oops, something went wrong! Please fill in all the fields."
+msgstr "Oeps, er is iets misgegaan! Vul alle velden in."
+
+#: lib/todo_list_web/templates/user/index.html.heex:13
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr "Acties"
+
+#: lib/todo_list_web/templates/user/index.html.heex:28
+#, elixir-autogen, elixir-format
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: lib/todo_list_web/templates/user/index.html.heex:27
+#: lib/todo_list_web/templates/user/show.html.heex:39
+#, elixir-autogen, elixir-format
+msgid "Edit"
+msgstr "Bewerken"
+
+#: lib/todo_list_web/templates/user/edit.html.heex:30
+#: lib/todo_list_web/templates/user/index.html.heex:12
+#: lib/todo_list_web/templates/user/show.html.heex:33
+#, elixir-autogen, elixir-format
+msgid "Role"
+msgstr "Rol"
+
+#: lib/todo_list_web/templates/user/index.html.heex:26
+#, elixir-autogen, elixir-format
+msgid "Show"
+msgstr "Tonen"
+
+#: lib/todo_list_web/templates/user/index.html.heex:35
+#, elixir-autogen, elixir-format
+msgid "New User"
+msgstr "Nieuwe Gebruiker"
+
+#: lib/todo_list_web/templates/user/edit.html.heex:2
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Edit User"
+msgstr "Gebruiker Bewerken"
+
+#: lib/todo_list_web/templates/user/edit.html.heex:7
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr "Oeps, er is iets misgegaan! Vul alle velden in."
+
+#: lib/todo_list_web/templates/user/edit.html.heex:55
+#, elixir-autogen, elixir-format
+msgid "Save"
+msgstr "Opslaan"
+
+#: lib/todo_list_web/templates/user/show.html.heex:40
+#, elixir-autogen, elixir-format
+msgid "Back"
+msgstr "Terug"
+
+#: lib/todo_list_web/templates/user/show.html.heex:4
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Show User"
+msgstr "Gebruiker tonen"
+
+#: lib/todo_list_web/templates/task/form.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "Deadline"
+msgstr "Deadline"
+
+#: lib/todo_list_web/templates/task/edit.html.heex:1
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Edit Task"
+msgstr "Taak Bewerken"
+
+#: lib/todo_list_web/templates/task/form.html.heex:27
+#, elixir-autogen, elixir-format
+msgid "Submit"
+msgstr "Verzenden"
+
+#: lib/todo_list_web/templates/task/form.html.heex:9
+#, elixir-autogen, elixir-format
+msgid "Title"
+msgstr "Titel"
+
+#: lib/todo_list_web/templates/task/index.html.heex:68
+#: lib/todo_list_web/templates/task/index.html.heex:118
+#: lib/todo_list_web/templates/user/index.html.heex:28
+#, elixir-autogen, elixir-format
+msgid "Are you sure?"
+msgstr "Bent u zeker?"
+
+#: lib/todo_list_web/templates/task/index.html.heex:107
+#, elixir-autogen, elixir-format
+msgid "Complete"
+msgstr "Voltooien"
+
+#: lib/todo_list_web/templates/task/index.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "Completed"
+msgstr "Voltooid"
+
+#: lib/todo_list_web/templates/task/form.html.heex:15
+#, elixir-autogen, elixir-format
+msgid "Description"
+msgstr "Beschrijving"
+
+#: lib/todo_list_web/templates/task/index.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "Guest"
+msgstr "Gast"
+
+#: lib/todo_list_web/templates/task/index.html.heex:17
+#, elixir-autogen, elixir-format
+msgid "No tasks yet, click the"
+msgstr "Nog geen taken, klik op "
+
+#: lib/todo_list_web/templates/task/index.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "Owner"
+msgstr "Eigenaar"
+
+#: lib/todo_list_web/templates/task/index.html.heex:24
+#, elixir-autogen, elixir-format
+msgid "Tasks can only be deleted by their owner."
+msgstr "Taken kunnen alleen worden verwijderd door hun eigenaar."
+
+#: lib/todo_list_web/templates/task/index.html.heex:17
+#, elixir-autogen, elixir-format
+msgid "button to create one."
+msgstr "knop om er een te maken."
+
+#: lib/todo_list_web/templates/task/new.html.heex:1
+#, elixir-autogen, elixir-format
+msgid "New Task"
+msgstr "Nieuwe Taak"
+
+#: lib/todo_list_web/controllers/task_controller.ex:22
+#, elixir-autogen, elixir-format
+msgid "Task created successfully."
+msgstr "Taak succesvol aangemaakt."
+
+#: lib/todo_list_web/controllers/task_controller.ex:74
+#, elixir-autogen, elixir-format
+msgid "Failed to invite user."
+msgstr "Gebruiker uitnodigen mislukt."
+
+#: lib/todo_list_web/controllers/task_controller.ex:26
+#, elixir-autogen, elixir-format
+msgid "Failed to create task. Please fill in all fields."
+msgstr "Taak aanmaken mislukt. Vul alle velden in."
+
+#: lib/todo_list_web/controllers/task_controller.ex:106
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Task deleted successfully."
+msgstr "Taak succesvol verwijderd."
+
+#: lib/todo_list_web/controllers/task_controller.ex:93
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Task updated successfully."
+msgstr "Taak succesvol bewerkt."
+
+#: lib/todo_list_web/controllers/task_controller.ex:69
+#, elixir-autogen, elixir-format
+msgid "User invited to task successfully."
+msgstr "Gebruiker uitgenodigd voor taak."
+
+#: lib/todo_list_web/controllers/user_controller.ex:62
+#, elixir-autogen, elixir-format
+msgid "User deleted successfully."
+msgstr "Gebruiker succesvol verwijderd."
+
+#: lib/todo_list_web/controllers/user_controller.ex:49
+#, elixir-autogen, elixir-format, fuzzy
+msgid "User updated successfully."
+msgstr "Gebruiker succesvol bijgewerkt."
+
+#: lib/todo_list_web/controllers/user_controller.ex:17
+#, elixir-autogen, elixir-format, fuzzy
+msgid "User created successfully."
+msgstr "Account succesvol aangemaakt."
+
+#: lib/todo_list_web/controllers/session_controller.ex:32
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Welcome back, "
+msgstr "Welkom terug, "
+
+#: lib/todo_list_web/templates/not_found/404.html.heex:1
+#, elixir-autogen, elixir-format
+msgid "Page not found"
+msgstr "Pagina niet gevonden"
+
+#: lib/todo_list_web/templates/not_found/404.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Sorry, maar de pagina die u probeerde te bekijken bestaat niet."
+
+#: lib/todo_list_web/templates/task/index_invite.html.heex:16
+#, elixir-autogen, elixir-format
+msgid "Accept"
+msgstr "Accepteren"
+
+#: lib/todo_list_web/controllers/task_controller.ex:50
+#, elixir-autogen, elixir-format
+msgid "Failed to accept task."
+msgstr "Taak accepteren mislukt."
+
+#: lib/todo_list_web/templates/task/invite.html.heex:19
+#, elixir-autogen, elixir-format
+msgid "Invite"
+msgstr "Uitnodigen"
+
+#: lib/todo_list_web/templates/layout/app.html.heex:18
+#: lib/todo_list_web/templates/task/index_invite.html.heex:1
+#, elixir-autogen, elixir-format
+msgid "Invites"
+msgstr "Uitnodigingen"
+
+#: lib/todo_list_web/templates/task/index_invite.html.heex:7
+#, elixir-autogen, elixir-format
+msgid "No invites"
+msgstr "Geen uitnodigingen"
+
+#: lib/todo_list_web/controllers/task_controller.ex:45
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Task accepted successfully."
+msgstr "Taak succesvol geaccepteerd."
+
+#: lib/todo_list/user_context.ex:54
+#, elixir-autogen, elixir-format
+msgid "Incorrect password"
+msgstr "Onjuist wachtwoord"
+
+#: lib/todo_list/user_context.ex:48
+#, elixir-autogen, elixir-format
+msgid "No user with this username"
+msgstr "Geen gebruiker met deze gebruikersnaam"
+
+#: lib/todo_list/user_context/user.ex:30
+#, elixir-autogen, elixir-format
+msgid "Username already used"
+msgstr "Gebruikersnaam al in gebruik"
+
+#: lib/todo_list_web/plugs/authorization_plug.ex:18
+#, elixir-autogen, elixir-format
+msgid "You are not authorized to access this page"
+msgstr "U bent niet gemachtigd om deze pagina te bekijken"
+
+#: lib/todo_list/user_context/user.ex:31
+#, elixir-autogen, elixir-format
+msgid "Email already used"
+msgstr "E-mail al in gebruik"

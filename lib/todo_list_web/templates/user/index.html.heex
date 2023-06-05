@@ -1,0 +1,36 @@
+<div class="container">
+  <h1><%= gettext "Users" %></h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th><%= gettext "First Name" %></th>
+        <th><%= gettext "Last Name" %></th>
+        <th><%= gettext "Email" %></th>
+        <th><%= gettext "Date of Birth" %></th>
+        <th><%= gettext "Role" %></th>
+        <th><%= gettext "Actions" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for user <- @users do %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.date_of_birth %></td>
+        <td><%= user.role %></td>
+        <td>
+          <span><%= link to: Routes.user_path(@conn, :show, user), class: "btn btn-primary btn-sm" do %><i class="fas fa-eye"></i> <%= gettext "Show" %><% end %></span>
+          <span><%= link to: Routes.user_path(@conn, :edit, user), class: "btn btn-secondary btn-sm" do %><i class="fas fa-edit"></i> <%= gettext "Edit" %><% end %></span>
+          <span><%= link to: Routes.user_path(@conn, :delete, user), method: :delete, data: [confirm: gettext("Are you sure?")], class: "btn btn-danger btn-sm" do %><i class="fas fa-trash-alt"></i> <%= gettext "Delete" %><% end %></span>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <span><%= link gettext("New User"), to: Routes.user_path(@conn, :new) %></span>
+</div>

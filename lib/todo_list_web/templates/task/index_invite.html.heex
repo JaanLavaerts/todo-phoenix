@@ -1,0 +1,21 @@
+<h2><%= gettext "Invites" %>
+</h2>
+
+<hr>
+<%= if @tasks == [] do %>
+  <div class="alert alert-warning" role="alert">
+    <i class="fas fa-info-circle"></i> <%= gettext "No invites" %>
+  </div>
+<% end %>
+<ul class="list-group">
+  <%= for task <- @tasks do %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <%= task.title %>
+      <span>
+        <%= link to: Routes.task_path(@conn, :accept_task, task.id), method: :post, class: "btn btn-success btn-sm" do %>
+          <i class="fa-solid fa-check"></i> <%= gettext "Accept" %>
+        <% end %>
+      </span>
+    </li>
+  <% end %>
+</ul>
